@@ -1,7 +1,6 @@
 const express = require("express");
 const axios = require("axios");
 const sharp = require("sharp");
-const cors=require("cors");
 const _ = require('lodash');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -9,7 +8,6 @@ require('dotenv').config();
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
 
 app.listen(process.env.PORT||3000, () => {
     console.log(`Le serveur écoute sur le port 3000`);
